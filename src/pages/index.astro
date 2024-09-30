@@ -1,15 +1,81 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+
+const schemamarkup = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Hvad betyder det at være funky?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "At være funky betyder at have en afslappet, autentisk og rytmisk stil, ofte med et præg af selvtillid og kreativitet. Udtrykket stammer fra funk-musikken og henviser til noget, der er energisk, groovy og sjælfuldt. Det bruges også om personer, mode eller bevægelser, der udstråler originalitet og livsglæde.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hvad er karakteristika for funkmusik?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Funkmusik er karakteriseret ved sin intense rytme og “groove”, der får folk til at danse og bevæge sig. Det er ofte baseret på en polyrytmisk tilgang, hvor forskellige instrumenter spiller forskellige rytmiske mønstre, der passer sammen for at skabe en kompleks og funky lyd.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Hvilken indflydelse har funk?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Funk Musikken har også haft en stærk indflydelse på andre genrer som hip-hop, R&B, dance og moderne popmusik. Funkens rytmiske og energiske karakter har bevaret sin popularitet og fortsætter med at inspirere musikere og dansere over hele verden.",
+      },
+    },
+  ],
+};
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
+
+<MainLayout title="Lære om Funk!" description="Funk er en instrumental og vokal genre af dansemusik, der blev populært i 1970'erne." ogtitle="Lær om Funk!" ogdescription="Nysgerrig på at lære mere om Funk? Klik for at læse mere.">
+  <article class="mx-[500px] my-10 grid gap-10">
+    <h1 class="text-5xl font-bold">Lær om Funk!</h1>
+    <img src="public/funk_foto.webp" alt="Billede af Funk" />
+    <section>
+      <h2 class="text-2xl font-bold mb-2">Genre</h2>
+      <p>
+        Funk er en instrumental og vokal genre af dansemusik, der blev populært i 1970’erne, og som favner mange stilarter fra jazz, blues, rhythm and blues, soul jazz, gospel og rock traditioner. Rytme har forrang over melodi og harmoni, og gentagne “grooves” holder danserne i gang. Funk kom på banen i en periode med social aktivisme i slutningen
+        af 1960’erne og udkrystalliserede sig i løbet af 1970’erne. Funk er en musikgenre, der opstod i USA i 1960’erne og 1970’erne. Den kombinerer elementer fra soul, jazz, R&B og blues og er kendt for sin markante rytmiske struktur, fokuserede baslinje og kraftfulde hornsektioner.
+      </p>
+    </section>
+    <section>
+      <h2 class="text-2xl font-bold mb-2">Karakteristika</h2>
+      <p>
+        Funkmusik er karakteriseret ved sin intense rytme og “groove”, der får folk til at danse og bevæge sig. Det er ofte baseret på en polyrytmisk tilgang, hvor forskellige instrumenter spiller forskellige rytmiske mønstre, der passer sammen for at skabe en kompleks og funky lyd. Funk bruger også ofte udtalte rytmeguitarer, messinginstrumenter
+        og keyboard-baserede riffs. Tekstligt fokuserer funk ofte på fest, dans, sociale spørgsmål og politiske budskaber. Teksterne kan være sjove og festlige eller indeholde sociale kommentarer og bevidsthed. Funk Musikken udtrykker ofte en følelse af empowerment, frigørelse og positiv energi.
+      </p>
+    </section>
+    <section>
+      <h2 class="text-2xl font-bold mb-2">Artister</h2>
+      <p>Nogle kendte funk artister og bands inkluderer James Brown, Parliament-Funkadelic, Sly and the Family Stone, Earth, Wind & Fire, Kool & The Gang og Prince. Disse kunstnere har haft en betydelig indflydelse på musikken og har bidraget til at forme den funky lyd og attitude.</p>
+    </section>
+    <section>
+      <h2 class="text-2xl font-bold mb-2">Indflydelse</h2>
+      <p>
+        Funk Musikken har også haft en stærk indflydelse på andre genrer som hip-hop, R&B, dance og moderne popmusik. Funkens rytmiske og energiske karakter har bevaret sin popularitet og fortsætter med at inspirere musikere og dansere over hele verden. Funkmusik, kaldet “happy music” af trommeslager Hamilton Bohannon, genforenede afroamerikanere
+        “én nation under en Groove.” Dens fremkomst er parallelt med overgangen fra et adskilt til et “ikke-adskilt” post-borgerrettigheds samfund i slutningen af 1960’erne og begyndelsen af 1970’erne. På trods af løfter om nye muligheder og fremskridt oplevede den sorte arbejderklasse og de fattige kun lidt forandring i deres liv i en æra med af
+        industrialisering og under to lavkonjunkturer 1973-1975 og 1980-1982. Samtidig mødte medlemmer af den sorte middelklasse ekskluderende praksis på integrerede arbejdspladser, boliger og sociale omgivelser. Udsigten til avancement i virksomhedernes Amerika, og overvejende hvide institutioner for videregående uddannelse, blev illusionen for
+        mange. Udtrykket “funk” såvel som mangfoldigheden af funk musikkens stilarter indfanger både de komplekse og ofte modstridende følelser af optimisme, ambivalens, desillusion og fortvivlelse, der fulgte med overgangen fra et adskilt til et post-borgerrettigheds samfund.
+      </p>
+    </section>
+    <section>
+      <h2 class="text-2xl font-bold mb-2">Hvad betyder det at være funky?</h2>
+      <p>At være funky betyder at have en afslappet, autentisk og rytmisk stil, ofte med et præg af selvtillid og kreativitet. Udtrykket stammer fra funk-musikken og henviser til noget, der er energisk, groovy og sjælfuldt. Det bruges også om personer, mode eller bevægelser, der udstråler originalitet og livsglæde.</p>
+    </section>
+    <!-- <h1>Index overskrift</h1>
 		<Button>Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+		<Image src={thumbsup} alt=""></Image> -->
+  </article>
 </MainLayout>
+<script type="application/ld+json" set:html={JSON.stringify(schemamarkup)} />
